@@ -7,12 +7,17 @@ Safe, offline modes only — none of these contacts an LLM:
     python -m src.main --mode dry-run
     python -m src.main --mode draft-markdown
     python -m src.main --mode validate-content
+    python -m src.main --mode generate-assets
+    python -m src.main --mode validate-assets
 
 ``dry-run`` prints the planned sequential pipeline and runs structural
 checks. ``draft-markdown`` writes the offline Markdown template skeleton
 (``content/draft.md`` + ``content/final_article.md``) and
-``validate-content`` checks that skeleton. The real ``crew.kickoff()`` run
-is wired in a later phase.
+``validate-content`` checks that skeleton. ``generate-assets`` renders the
+conceptual graph (``figures/complexity_comparison.png``) and the
+table/formula Markdown (``content/tables_formulas.md``); ``validate-assets``
+checks those technical assets. The real ``crew.kickoff()`` run is wired in a
+later phase.
 """
 
 from __future__ import annotations
@@ -26,9 +31,21 @@ except Exception:  # pragma: no cover - older interpreters
     pass
 
 from src.agents.definitions import AGENT_SPECS
+from src.pipeline.asset_validator import validate_assets
 from src.pipeline.markdown_pipeline import draft_markdown, validate_content
 from src.tasks.definitions import TASK_SPECS, output_file
 from src.validators import run_all_checks
+
+
+def generate_assets() -> int:
+    """Build the conceptual graph and the table/formula Markdown asset."""
+    from src.pipeline.graph_generator import generate_graph
+    from src.pipeline.technical_assets import generate_assets as write_assets
+
+    rc = generate_graph()
+    print()
+    rc |= write_assets()
+    return rc
 
 
 def show_agents() -> None:
@@ -91,6 +108,8 @@ def main() -> int:
             "dry-run",
             "draft-markdown",
             "validate-content",
+            "generate-assets",
+            "validate-assets",
         ],
         help="Which safe, offline action to run.",
     )
@@ -106,6 +125,10 @@ def main() -> int:
         return draft_markdown()
     if args.mode == "validate-content":
         return validate_content()
+    if args.mode == "generate-assets":
+        return generate_assets()
+    if args.mode == "validate-assets":
+        return validate_assets()
     return dry_run()
 
 
