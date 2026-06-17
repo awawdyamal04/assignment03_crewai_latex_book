@@ -1,0 +1,516 @@
+Phase 6 compile log
+build order: lualatex -> biber -> lualatex -> lualatex
+
+===== lualatex (pass 1): lualatex -interaction=nonstopmode main.tex =====
+This is LuaHBTeX, Version 1.25.7 (MiKTeX 26.5)
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.s
+ty (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-luatex
+.def)))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luatex.s
+ty (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg)))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/polyglossia.st
+y (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-latex.ld
+f))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-english.
+ldf)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-hebrew.l
+df (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/lualatex/luabidi/luabidi.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/hebrewcal.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/cal-util.def))
+
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/babel-hebrewal
+ph.def))
+luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: Font "David CLM" not found.
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def)))
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds.st
+y
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bbx
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.bbx)
+) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cbx
+) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3.st
+y)) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefinekey
+s.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettitles
+tring.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.st
+y))) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilech
+eck.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquecoun
+ter.sty))) (./main.aux)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base
+.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg)
+)
+
+Package biblatex Warning: Language 'hebrew' not supported.
+(biblatex)                Using dummy definitions on input line 68.
+
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/american.lbx
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx))
+(./main.bbl) (./main.out) (./main.out)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd) [1{C:/Us
+ers/U1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [1] (./main.toc)
+[2]
+Chapter 1.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1]
+Chapter 2.
+[2]
+Chapter 3.
+
+Overfull \hbox (9.49554pt too wide) in paragraph at lines 126--132
+\TU/LatinModernRoman(0)/m/n/10.95 The LSTM ad-dresses the vanishing-gradient pr
+ob-lem with a gated cell state [[][]5[][]].
+[3]
+Chapter 4.
+[4<../figures/complexity_comparison.png>]
+Chapter 5.
+[5]
+Chapter 6.
+
+Overfull \hbox (33.99944pt too wide) in paragraph at lines 176--186
+ [][] 
+[6]
+Chapter 7.
+[7]
+Chapter 8.
+[8]
+Overfull \hbox (14.82088pt too wide) in paragraph at lines 207--207
+\TU/LatinModernRoman(0)/m/n/10.95 ``Learn-ing rep-re-sen-ta-tions by back-propa
+gating er-rors.'' In: \TU/LatinModernRoman(0)/m/it/10.95 Na-ture \TU/LatinModer
+nRoman(0)/m/n/10.95 323.6088
+[9] (./main.aux))
+(see the transcript file for additional information)
+ 587 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 10 attribute, 67 glue_spe
+c, 10 attribute_list, 1 write, 2 pdf_action nodes
+   avail lists: 2:526,3:242,4:66,5:252,6:34,7:3335,8:45,9:174,10:10,11:194
+<C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman10-i
+talic.otf><C:/WINDOWS/Fonts/david.ttf><c:/users/u1/appdata/local/programs/mikte
+x/fonts/opentype/public/lm/lmmono10-regular.otf><C:/Users/U1/AppData/Local/Prog
+rams/MiKTeX/fonts/opentype/public/lm/lmroman10-regular.otf><C:/Users/U1/AppData
+/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman10-bold.otf><C:/Users/U1
+/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman12-italic.otf><C
+:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman12-bol
+d.otf><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (12 pages, 287435 bytes).
+Transcript written on main.log.
+lualatex: major issue: So far, you have not checked for MiKTeX updates.
+
+[exit code: 0]
+
+===== biber: biber main =====
+INFO - This is Biber 2.21
+INFO - Logfile is 'main.blg'
+INFO - Reading 'main.bcf'
+INFO - Found 7 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'references.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'references.bib'
+INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+INFO - No sort tailoring available for locale 'en-US'
+INFO - Writing 'main.bbl' with encoding 'UTF-8'
+INFO - Output to main.bbl
+biber: major issue: So far, you have not checked for MiKTeX updates.
+
+[exit code: 0]
+
+===== lualatex (pass 2): lualatex -interaction=nonstopmode main.tex =====
+This is LuaHBTeX, Version 1.25.7 (MiKTeX 26.5)
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.s
+ty (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-luatex
+.def)))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luatex.s
+ty (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg)))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/polyglossia.st
+y (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-latex.ld
+f))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-english.
+ldf)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-hebrew.l
+df (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/lualatex/luabidi/luabidi.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/hebrewcal.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/cal-util.def))
+
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/babel-hebrewal
+ph.def))
+luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: Font "David CLM" not found.
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def)))
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds.st
+y
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bbx
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.bbx)
+) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cbx
+) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3.st
+y)) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefinekey
+s.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettitles
+tring.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.st
+y))) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilech
+eck.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquecoun
+ter.sty))) (./main.aux)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base
+.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg)
+)
+
+Package biblatex Warning: Language 'hebrew' not supported.
+(biblatex)                Using dummy definitions on input line 68.
+
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/american.lbx
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx))
+(./main.bbl) (./main.out) (./main.out)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd) [1{C:/Us
+ers/U1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [1] (./main.toc)
+[2]
+Chapter 1.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1]
+Chapter 2.
+[2]
+Chapter 3.
+
+Overfull \hbox (9.49554pt too wide) in paragraph at lines 126--132
+\TU/LatinModernRoman(0)/m/n/10.95 The LSTM ad-dresses the vanishing-gradient pr
+ob-lem with a gated cell state [[][]5[][]].
+[3]
+Chapter 4.
+[4<../figures/complexity_comparison.png>]
+Chapter 5.
+[5]
+Chapter 6.
+
+Overfull \hbox (33.99944pt too wide) in paragraph at lines 176--186
+ [][] 
+[6]
+Chapter 7.
+[7]
+Chapter 8.
+[8]
+Overfull \hbox (14.82088pt too wide) in paragraph at lines 207--207
+\TU/LatinModernRoman(0)/m/n/10.95 ``Learn-ing rep-re-sen-ta-tions by back-propa
+gating er-rors.'' In: \TU/LatinModernRoman(0)/m/it/10.95 Na-ture \TU/LatinModer
+nRoman(0)/m/n/10.95 323.6088
+[9] (./main.aux))
+(see the transcript file for additional information)
+ 587 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 10 attribute, 67 glue_spe
+c, 10 attribute_list, 1 write, 2 pdf_action nodes
+   avail lists: 2:526,3:242,4:66,5:252,6:34,7:3335,8:45,9:174,10:10,11:194
+<C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman10-i
+talic.otf><C:/WINDOWS/Fonts/david.ttf><c:/users/u1/appdata/local/programs/mikte
+x/fonts/opentype/public/lm/lmmono10-regular.otf><C:/Users/U1/AppData/Local/Prog
+rams/MiKTeX/fonts/opentype/public/lm/lmroman10-regular.otf><C:/Users/U1/AppData
+/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman10-bold.otf><C:/Users/U1
+/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman12-italic.otf><C
+:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman12-bol
+d.otf><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (12 pages, 287435 bytes).
+Transcript written on main.log.
+lualatex: major issue: So far, you have not checked for MiKTeX updates.
+
+[exit code: 0]
+
+===== lualatex (pass 3): lualatex -interaction=nonstopmode main.tex =====
+This is LuaHBTeX, Version 1.25.7 (MiKTeX 26.5)
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.s
+ty (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-luatex
+.def)))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luatex.s
+ty (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg)))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/polyglossia.st
+y (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-latex.ld
+f))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-english.
+ldf)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/gloss-hebrew.l
+df (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/lualatex/luabidi/luabidi.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/hebrewcal.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/cal-util.def))
+
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/polyglossia/babel-hebrewal
+ph.def))
+luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: Font "David CLM" not found.
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def)))
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds.st
+y
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bbx
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.bbx)
+) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cbx
+) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3.st
+y)) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefinekey
+s.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.sty)
+ (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettitles
+tring.sty))
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.st
+y))) (C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilech
+eck.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquecoun
+ter.sty))) (./main.aux)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base
+.sty
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg)
+)
+
+Package biblatex Warning: Language 'hebrew' not supported.
+(biblatex)                Using dummy definitions on input line 68.
+
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/american.lbx
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx))
+(./main.bbl) (./main.out) (./main.out)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd)
+(C:/Users/U1/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd) [1{C:/Us
+ers/U1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [1] (./main.toc)
+[2]
+Chapter 1.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1]
+Chapter 2.
+[2]
+Chapter 3.
+
+Overfull \hbox (9.49554pt too wide) in paragraph at lines 126--132
+\TU/LatinModernRoman(0)/m/n/10.95 The LSTM ad-dresses the vanishing-gradient pr
+ob-lem with a gated cell state [[][]5[][]].
+[3]
+Chapter 4.
+[4<../figures/complexity_comparison.png>]
+Chapter 5.
+[5]
+Chapter 6.
+
+Overfull \hbox (33.99944pt too wide) in paragraph at lines 176--186
+ [][] 
+[6]
+Chapter 7.
+[7]
+Chapter 8.
+[8]
+Overfull \hbox (14.82088pt too wide) in paragraph at lines 207--207
+\TU/LatinModernRoman(0)/m/n/10.95 ``Learn-ing rep-re-sen-ta-tions by back-propa
+gating er-rors.'' In: \TU/LatinModernRoman(0)/m/it/10.95 Na-ture \TU/LatinModer
+nRoman(0)/m/n/10.95 323.6088
+[9] (./main.aux))
+(see the transcript file for additional information)
+ 587 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 10 attribute, 67 glue_spe
+c, 10 attribute_list, 1 write, 2 pdf_action nodes
+   avail lists: 2:526,3:242,4:66,5:252,6:34,7:3335,8:45,9:174,10:10,11:194
+<C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman10-i
+talic.otf><C:/WINDOWS/Fonts/david.ttf><c:/users/u1/appdata/local/programs/mikte
+x/fonts/opentype/public/lm/lmmono10-regular.otf><C:/Users/U1/AppData/Local/Prog
+rams/MiKTeX/fonts/opentype/public/lm/lmroman10-regular.otf><C:/Users/U1/AppData
+/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman10-bold.otf><C:/Users/U1
+/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman12-italic.otf><C
+:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmroman12-bol
+d.otf><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/U1/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (12 pages, 287435 bytes).
+Transcript written on main.log.
+lualatex: major issue: So far, you have not checked for MiKTeX updates.
+
+[exit code: 0]

@@ -11,6 +11,8 @@ Safe, offline modes only — none of these contacts an LLM:
     python -m src.main --mode validate-assets
     python -m src.main --mode build-latex
     python -m src.main --mode validate-latex
+    python -m src.main --mode compile-pdf
+    python -m src.main --mode validate-pdf
 
 ``dry-run`` prints the planned sequential pipeline and runs structural
 checks. ``draft-markdown`` writes the offline Markdown template skeleton
@@ -20,8 +22,11 @@ conceptual graph (``figures/complexity_comparison.png``) and the
 table/formula Markdown (``content/tables_formulas.md``); ``validate-assets``
 checks those technical assets. ``build-latex`` assembles the LuaLaTeX source
 (``latex/main.tex`` + ``latex/references.bib``) without compiling, and
-``validate-latex`` checks that source. The real ``crew.kickoff()`` run is
-wired in a later phase.
+``validate-latex`` checks that source. ``compile-pdf`` runs
+lualatex -> biber -> lualatex -> lualatex to produce
+``results/final_output.pdf`` (+ ``results/compile_log.txt``), and
+``validate-pdf`` verifies that compiled PDF. The real ``crew.kickoff()`` run
+is wired in a later phase.
 """
 
 from __future__ import annotations
@@ -39,6 +44,8 @@ from src.pipeline.asset_validator import validate_assets
 from src.pipeline.latex_builder import build_latex
 from src.pipeline.latex_validator import validate_latex
 from src.pipeline.markdown_pipeline import draft_markdown, validate_content
+from src.pipeline.pdf_compiler import compile_pdf
+from src.pipeline.pdf_validator import validate_pdf
 from src.tasks.definitions import TASK_SPECS, output_file
 from src.validators import run_all_checks
 
@@ -102,46 +109,31 @@ def dry_run() -> int:
 
 
 def main() -> int:
+    # Each handler returns an exit code; show_* return None so coerce to 0.
+    handlers = {
+        "show-agents": lambda: show_agents() or 0,
+        "show-tasks": lambda: show_tasks() or 0,
+        "dry-run": dry_run,
+        "draft-markdown": draft_markdown,
+        "validate-content": validate_content,
+        "generate-assets": generate_assets,
+        "validate-assets": validate_assets,
+        "build-latex": build_latex,
+        "validate-latex": validate_latex,
+        "compile-pdf": compile_pdf,
+        "validate-pdf": validate_pdf,
+    }
     parser = argparse.ArgumentParser(
         prog="src.main", description="CrewAI LaTeX-book pipeline (skeleton)."
     )
     parser.add_argument(
         "--mode",
         required=True,
-        choices=[
-            "show-agents",
-            "show-tasks",
-            "dry-run",
-            "draft-markdown",
-            "validate-content",
-            "generate-assets",
-            "validate-assets",
-            "build-latex",
-            "validate-latex",
-        ],
+        choices=list(handlers),
         help="Which safe, offline action to run.",
     )
     args = parser.parse_args()
-
-    if args.mode == "show-agents":
-        show_agents()
-        return 0
-    if args.mode == "show-tasks":
-        show_tasks()
-        return 0
-    if args.mode == "draft-markdown":
-        return draft_markdown()
-    if args.mode == "validate-content":
-        return validate_content()
-    if args.mode == "generate-assets":
-        return generate_assets()
-    if args.mode == "validate-assets":
-        return validate_assets()
-    if args.mode == "build-latex":
-        return build_latex()
-    if args.mode == "validate-latex":
-        return validate_latex()
-    return dry_run()
+    return handlers[args.mode]()
 
 
 if __name__ == "__main__":

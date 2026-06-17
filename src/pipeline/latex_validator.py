@@ -11,6 +11,10 @@ from __future__ import annotations
 from src.config import LATEX_DIR, RESULTS_DIR, rel
 from src.pipeline.latex_builder import MAIN_TEX_PATH
 from src.pipeline.latex_references import REFERENCES_PATH
+from src.pipeline.pdf_compiler import BUILT_PDF_PATH, FINAL_PDF_PATH
+
+# PDFs the Phase 6 compile step is expected to produce; not "stray" output.
+EXPECTED_PDFS = {BUILT_PDF_PATH.resolve(), FINAL_PDF_PATH.resolve()}
 
 # Each feature maps to substrings; the feature passes if ANY substring is found.
 FEATURE_TOKENS: dict[str, tuple[str, ...]] = {
@@ -48,14 +52,19 @@ def check_features() -> dict[str, list[str]]:
     return results
 
 
-def check_no_pdf() -> list[str]:
-    """Phase 5 must not create a final PDF (only assembles the source)."""
+def check_no_stray_pdf() -> list[str]:
+    """``build-latex`` only assembles source; flag any unexpected PDF.
+
+    The Phase 6 compile outputs (``latex/main.pdf``, ``results/final_output.pdf``)
+    are expected and ignored — only stray PDFs are reported.
+    """
     errors: list[str] = []
     for directory in (RESULTS_DIR, LATEX_DIR):
         if not directory.exists():
             continue
         for pdf in sorted(directory.rglob("*.pdf")):
-            errors.append(f"unexpected PDF present: {rel(pdf)}")
+            if pdf.resolve() not in EXPECTED_PDFS:
+                errors.append(f"unexpected PDF present: {rel(pdf)}")
     return errors
 
 
@@ -63,7 +72,7 @@ def run_latex_checks() -> dict[str, list[str]]:
     """Run every check; empty lists mean the check passed."""
     results: dict[str, list[str]] = {"files_exist": check_files_exist()}
     results.update(check_features())
-    results["no_final_pdf"] = check_no_pdf()
+    results["no_stray_pdf"] = check_no_stray_pdf()
     return results
 
 

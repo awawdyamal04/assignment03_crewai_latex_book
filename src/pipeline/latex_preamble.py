@@ -20,9 +20,17 @@ PREAMBLE = r"""% main.tex — academic article assembled by the Phase 5 pipeline
 \setmainlanguage{english}
 \setotherlanguage{hebrew}
 \setmainfont{Latin Modern Roman}
-% A Hebrew-capable font (Culmus "David CLM" ships with TeX Live). Swap this
-% for any installed Hebrew font if David CLM is unavailable on the build host.
-\newfontfamily\hebrewfont[Script=Hebrew]{David CLM}
+% Pick the first installed Hebrew-capable font so the BiDi chapter (F10)
+% renders on whatever host builds the document: "David CLM" ships with TeX
+% Live (Culmus); "David"/"FrankRuehl" ship with Windows. Falls back to the
+% main font only if none is found (which would surface as missing glyphs).
+\IfFontExistsTF{David CLM}
+  {\newfontfamily\hebrewfont[Script=Hebrew]{David CLM}}
+  {\IfFontExistsTF{David}
+    {\newfontfamily\hebrewfont[Script=Hebrew]{David}}
+    {\IfFontExistsTF{FrankRuehl}
+      {\newfontfamily\hebrewfont[Script=Hebrew]{FrankRuehl}}
+      {\newfontfamily\hebrewfont[Script=Hebrew]{Latin Modern Roman}}}}
 
 % ── Mathematics ─────────────────────────────────────────────────────────────
 \usepackage{amsmath}
@@ -31,6 +39,8 @@ PREAMBLE = r"""% main.tex — academic article assembled by the Phase 5 pipeline
 % ── Graphics & tables ───────────────────────────────────────────────────────
 \usepackage{graphicx}
 \usepackage{booktabs}
+% xcolor provides the `blue!50!black` colour-mixing used by hyperref below.
+\usepackage{xcolor}
 \graphicspath{{../figures/}{figures/}}
 
 % ── Headers & footers (every body page) ─────────────────────────────────────
