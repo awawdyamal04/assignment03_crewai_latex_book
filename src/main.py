@@ -5,9 +5,14 @@ Safe, offline modes only — none of these contacts an LLM:
     python -m src.main --mode show-agents
     python -m src.main --mode show-tasks
     python -m src.main --mode dry-run
+    python -m src.main --mode draft-markdown
+    python -m src.main --mode validate-content
 
 ``dry-run`` prints the planned sequential pipeline and runs structural
-checks. The real ``crew.kickoff()`` run is wired in a later phase.
+checks. ``draft-markdown`` writes the offline Markdown template skeleton
+(``content/draft.md`` + ``content/final_article.md``) and
+``validate-content`` checks that skeleton. The real ``crew.kickoff()`` run
+is wired in a later phase.
 """
 
 from __future__ import annotations
@@ -21,6 +26,7 @@ except Exception:  # pragma: no cover - older interpreters
     pass
 
 from src.agents.definitions import AGENT_SPECS
+from src.pipeline.markdown_pipeline import draft_markdown, validate_content
 from src.tasks.definitions import TASK_SPECS, output_file
 from src.validators import run_all_checks
 
@@ -79,7 +85,13 @@ def main() -> int:
     parser.add_argument(
         "--mode",
         required=True,
-        choices=["show-agents", "show-tasks", "dry-run"],
+        choices=[
+            "show-agents",
+            "show-tasks",
+            "dry-run",
+            "draft-markdown",
+            "validate-content",
+        ],
         help="Which safe, offline action to run.",
     )
     args = parser.parse_args()
@@ -90,6 +102,10 @@ def main() -> int:
     if args.mode == "show-tasks":
         show_tasks()
         return 0
+    if args.mode == "draft-markdown":
+        return draft_markdown()
+    if args.mode == "validate-content":
+        return validate_content()
     return dry_run()
 
 
