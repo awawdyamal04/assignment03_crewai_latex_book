@@ -9,6 +9,8 @@ Safe, offline modes only — none of these contacts an LLM:
     python -m src.main --mode validate-content
     python -m src.main --mode generate-assets
     python -m src.main --mode validate-assets
+    python -m src.main --mode build-latex
+    python -m src.main --mode validate-latex
 
 ``dry-run`` prints the planned sequential pipeline and runs structural
 checks. ``draft-markdown`` writes the offline Markdown template skeleton
@@ -16,8 +18,10 @@ checks. ``draft-markdown`` writes the offline Markdown template skeleton
 ``validate-content`` checks that skeleton. ``generate-assets`` renders the
 conceptual graph (``figures/complexity_comparison.png``) and the
 table/formula Markdown (``content/tables_formulas.md``); ``validate-assets``
-checks those technical assets. The real ``crew.kickoff()`` run is wired in a
-later phase.
+checks those technical assets. ``build-latex`` assembles the LuaLaTeX source
+(``latex/main.tex`` + ``latex/references.bib``) without compiling, and
+``validate-latex`` checks that source. The real ``crew.kickoff()`` run is
+wired in a later phase.
 """
 
 from __future__ import annotations
@@ -32,6 +36,8 @@ except Exception:  # pragma: no cover - older interpreters
 
 from src.agents.definitions import AGENT_SPECS
 from src.pipeline.asset_validator import validate_assets
+from src.pipeline.latex_builder import build_latex
+from src.pipeline.latex_validator import validate_latex
 from src.pipeline.markdown_pipeline import draft_markdown, validate_content
 from src.tasks.definitions import TASK_SPECS, output_file
 from src.validators import run_all_checks
@@ -110,6 +116,8 @@ def main() -> int:
             "validate-content",
             "generate-assets",
             "validate-assets",
+            "build-latex",
+            "validate-latex",
         ],
         help="Which safe, offline action to run.",
     )
@@ -129,6 +137,10 @@ def main() -> int:
         return generate_assets()
     if args.mode == "validate-assets":
         return validate_assets()
+    if args.mode == "build-latex":
+        return build_latex()
+    if args.mode == "validate-latex":
+        return validate_latex()
     return dry_run()
 
 
