@@ -29,6 +29,10 @@ Each agent writes its artifact to disk; the next agent receives the previous
 output as **task context** (CrewAI `context=[...]`), implementing sequential
 context passing.
 
+> Filenames in the diagram above are abbreviated for layout. The **canonical
+> artifact paths** are the ones listed in the §4 table (e.g.
+> `content/course_alignment.md`, `content/tables_formulas.md`) and in `todo.md`.
+
 ---
 
 ## 2. Technology Stack
@@ -95,7 +99,7 @@ Sequential `Process.sequential`. Each task lists its predecessor(s) in
 | 6 | Table & Formula | Table (md) + LaTeX math formula | `content/tables_formulas.md` |
 | 7 | Reviewer | Reviewed/approved manuscript + notes | `content/reviewed.md` |
 | 8 | LaTeX Converter | Valid `.tex` assembling everything | `latex/main.tex` |
-| 9 | PDF Validation | Pass/fail report on F1–F12 | `results/validation.md` |
+| 9 | PDF Validation | Pass/fail report on F1–F13 | `results/validation.md` |
 
 Each agent factory lives in its own module under `src/agents/`; each task
 definition under `src/tasks/`. `src/main.py` wires them into a `Crew` and runs it.
@@ -128,7 +132,7 @@ definition under `src/tasks/`. `src/main.py` wires them into a `Crew` and runs i
 8. **Phase 7 — Visualization:** verify Python graph renders to PNG.
 9. **Phase 8 — LaTeX assembly:** `main.tex`, preamble, `references.bib`.
 10. **Phase 9 — Compilation:** LuaLaTeX + biber build to PDF.
-11. **Phase 10 — Validation:** check F1–F12; iterate until all pass.
+11. **Phase 10 — Validation:** check F1–F13; iterate until all pass.
 12. **Phase 11 — Polish & submit:** README report, final commits, push.
 
 Each phase ends with a **meaningful commit** (and ideally a verify step).
@@ -150,6 +154,6 @@ Each phase ends with a **meaningful commit** (and ideally a verify step).
 
 ## 8. Definition of Done
 
-All F1–F12 acceptance criteria pass against a real compiled PDF, the repo builds
+All F1–F13 acceptance criteria pass against a real compiled PDF, the repo builds
 from a clean checkout using only the documented UV/CLI commands, every Python
 file is < 150 lines, and the commit history is incremental and meaningful.

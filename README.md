@@ -95,7 +95,7 @@ Prerequisites: a TeX distribution providing `lualatex` and `biber`
 
 ---
 
-## 7. Document Feature Checklist (F1–F12)
+## 7. Document Feature Checklist (F1–F13)
 
 | # | Feature | Status |
 |---|---------|--------|
@@ -109,8 +109,9 @@ Prerequisites: a TeX distribution providing `lualatex` and `biber`
 | F8 | One complex math formula | ☐ _TBD_ |
 | F9 | Python-generated graph | ☐ _TBD_ |
 | F10 | Bilingual Hebrew/English chapter | ☐ _TBD_ |
-| F11 | Citations + bibliography (biber) | ☐ _TBD_ |
+| F11 | Citations + bibliography (biber, ≥6 sources) | ☐ _TBD_ |
 | F12 | Working PDF hyperlinks | ☐ _TBD_ |
+| F13 | Abstract (English) precedes the body | ☐ _TBD_ |
 
 ---
 

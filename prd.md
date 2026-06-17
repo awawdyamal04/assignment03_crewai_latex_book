@@ -68,8 +68,9 @@ The compiled PDF is **only accepted** when every item below is verifiably presen
 | F8 | One complex math formula | E.g. the scaled dot-product attention equation |
 | F9 | Python-generated graph | A figure produced by agent-written Python code |
 | F10 | Bilingual BiDi chapter | One chapter correctly mixes Hebrew + English |
-| F11 | Citations + bibliography | BibTeX/biber, full reference list, real sources |
+| F11 | Citations + bibliography | BibTeX/biber, full reference list with **at least 6 real sources** |
 | F12 | Working PDF hyperlinks | Internal + external links are clickable (hyperref) |
+| F13 | Abstract | A short English abstract precedes the body (after title page, before/with TOC) |
 
 ---
 
@@ -100,7 +101,7 @@ sequentially from one agent to the next.
 6. **Table and Formula Agent** — produces the table + the complex math formula.
 7. **Reviewer Agent** — checks accuracy, structure, completeness, and coherence.
 8. **LaTeX Converter Agent** — converts approved Markdown into a valid `.tex` file.
-9. **PDF Validation Agent** — verifies all F1–F12 features exist in the output.
+9. **PDF Validation Agent** — verifies all F1–F13 features exist in the output.
 
 ---
 
@@ -129,5 +130,5 @@ sequentially from one agent to the next.
 
 The project succeeds when a reviewer can, from a clean checkout, run the
 documented UV/CLI commands and obtain a ~15-page bilingual academic PDF that
-satisfies every acceptance criterion F1–F12, backed by a GitHub repository with
+satisfies every acceptance criterion F1–F13, backed by a GitHub repository with
 an incremental, meaningful commit history.

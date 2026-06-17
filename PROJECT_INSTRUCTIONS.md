@@ -64,7 +64,7 @@ Documentation comes first. **No Python code is written during the documentation 
 ## 6. No-Fake-Results Rule
 
 - Never fabricate output, screenshots, page counts, or "passing" checks.
-- Every claimed document feature (F1–F12 in `prd.md`) must exist in a **real
+- Every claimed document feature (F1–F13 in `prd.md`) must exist in a **real
   compiled PDF** and be verifiable.
 - If something does not work, **say so** and record it; do not pretend it passed.
 - The PDF Validation Agent's report must reflect the actual compiled artifact.
@@ -98,5 +98,5 @@ Documentation comes first. **No Python code is written during the documentation 
 
 A task is done only when it is implemented, verified against `prd.md`/`plan.md`,
 its TODO item is checked off, and the change is committed with a meaningful
-message. The project is done when all F1–F12 criteria pass on a real PDF built
+message. The project is done when all F1–F13 criteria pass on a real PDF built
 from a clean checkout via UV/CLI.

@@ -14,7 +14,7 @@ small so the commit history stays meaningful.
 - [ ] 0.1 Confirm the chosen topic with the assignment brief
 - [ ] 0.2 Confirm course number 203.3763 is recorded everywhere
 - [ ] 0.3 Create `prd.md` describing WHAT the project must do
-- [ ] 0.4 List all 12 mandatory PDF features (F1–F12) in `prd.md`
+- [ ] 0.4 List all 13 mandatory PDF features (F1–F13) in `prd.md`
 - [ ] 0.5 Define acceptance criteria for each feature in `prd.md`
 - [ ] 0.6 List the 9 required agents in `prd.md`
 - [ ] 0.7 Record methodological requirements in `prd.md`
@@ -29,7 +29,7 @@ small so the commit history stays meaningful.
 - [ ] 0.16 Add risks & mitigations to `plan.md`
 - [ ] 0.17 Create `todo.md` with 300–800 tasks (this file)
 - [ ] 0.18 Create `README.md` as the final report template
-- [ ] 0.19 Add F1–F12 status checklist to `README.md`
+- [ ] 0.19 Add F1–F13 status checklist to `README.md`
 - [ ] 0.20 Create `PROJECT_INSTRUCTIONS.md` with all working rules
 - [ ] 0.21 Document the Vibe Coding lifecycle in `PROJECT_INSTRUCTIONS.md`
 - [ ] 0.22 Document the CLI-only rule
@@ -167,7 +167,7 @@ small so the commit history stays meaningful.
 
 ### PDF Validation Agent
 - [ ] 3.37 Create `src/agents/pdf_validation.py`
-- [ ] 3.38 Define role, goal, backstory (checks F1–F12)
+- [ ] 3.38 Define role, goal, backstory (checks F1–F13)
 - [ ] 3.39 Expose `build_pdf_validation()`
 - [ ] 3.40 Keep file under 150 lines _(verify)_
 
@@ -241,7 +241,7 @@ small so the commit history stays meaningful.
 
 ### Validation task
 - [ ] 4.41 Create `src/tasks/validation_task.py`
-- [ ] 4.42 Write description (check F1–F12 in compiled PDF)
+- [ ] 4.42 Write description (check F1–F13 in compiled PDF)
 - [ ] 4.43 Set `context=[latex_task]`
 - [ ] 4.44 Set output file `results/validation.md`
 - [ ] 4.45 Keep file under 150 lines _(verify)_
@@ -331,6 +331,7 @@ small so the commit history stays meaningful.
 - [ ] 8.12 Create `latex/references.bib` with real entries
 - [ ] 8.13 Add ≥6 real references (RNN, LSTM, Attention, CrewAI, etc.)
 - [ ] 8.14 Build the title page (course 203.3763, lecturer, student, date)
+- [ ] 8.14a Add a short English abstract after the title page (F13)
 - [ ] 8.15 Add `\tableofcontents`
 - [ ] 8.16 Add chapter/section structure for all 6 topics
 - [ ] 8.17 Insert the figure with `\includegraphics` + caption + label
@@ -372,7 +373,7 @@ small so the commit history stays meaningful.
 
 ---
 
-## Phase 10 — Validation (F1–F12 against the real PDF)
+## Phase 10 — Validation (F1–F13 against the real PDF)
 
 - [ ] 10.1 Open the compiled PDF
 - [ ] 10.2 F1: Count pages — confirm ~15 (14–17) of content
@@ -391,14 +392,15 @@ small so the commit history stays meaningful.
 - [ ] 10.15 F10: Confirm Hebrew text renders (no missing glyphs)
 - [ ] 10.16 F10: Confirm English+Hebrew mix in one chapter is correct (BiDi)
 - [ ] 10.17 F11: Confirm citations render as `[n]`/author-year
-- [ ] 10.18 F11: Confirm bibliography section lists all references
+- [ ] 10.18 F11: Confirm bibliography lists all references (≥6 real sources)
+- [ ] 10.18a F13: Confirm a short English abstract appears before the body
 - [ ] 10.19 F12: Click an internal TOC link — confirm it jumps
 - [ ] 10.20 F12: Click an external URL/DOI — confirm it opens
 - [ ] 10.21 Run the PDF Validation Agent and read `results/validation.md`
 - [ ] 10.22 Reconcile agent report with manual checks (no fake passes)
 - [ ] 10.23 Fix any failing feature and recompile
-- [ ] 10.24 Re-validate until all F1–F12 pass
-- [ ] 10.25 Update the F1–F12 checklist in `README.md` with real status
+- [ ] 10.24 Re-validate until all F1–F13 pass
+- [ ] 10.25 Update the F1–F13 checklist in `README.md` with real status
 - [ ] 10.26 Commit: validation report
 - [ ] 10.27 Commit: fixes from validation round
 
