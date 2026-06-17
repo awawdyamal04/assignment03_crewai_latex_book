@@ -2,14 +2,14 @@
 
 ## Assignment 03 — Orchestration of AI Agents (203.3763)
 
-**Project title:** *From RNN and LSTM to Transformers and AI Agents: How Modern AI Systems Generate Knowledge*
+**Project title:** *Cyberbullying Should Have Legal Consequences: A Multi-Agent Academic Analysis Generated with CrewAI and LuaLaTeX*
 
 ---
 
 ## 1. Purpose (The Idea)
 
 Build a **multi-agent system** using the **CrewAI** framework that autonomously
-researches, writes, illustrates, reviews, and typesets a **~15-page academic
+researches, writes, illustrates, reviews, and typesets a **15–18 page academic
 article** as a compiled **PDF** produced from **LuaLaTeX**.
 
 The agents act like a small publishing organization: each agent owns one
@@ -40,15 +40,28 @@ This PRD describes **WHAT** must be built. `plan.md` describes **HOW**.
 
 ## 3. The Document — Content Requirements
 
-The article explains the evolution of sequence modeling and modern agentic AI:
+The article argues a **balanced thesis**: cyberbullying should have legal
+consequences when it is repeated, targeted, severe, threatening, defamatory,
+exploitative, or causes serious harm; however, consequences must be
+proportional, age-aware, evidence-based, and combined with education, school
+intervention, reporting systems, and platform responsibility.
 
-1. Why sequential models such as **RNNs** were needed.
-2. What problem **LSTM** solved (vanishing/exploding gradients, long-term memory).
-3. Why **Transformers** replaced much of the sequential approach.
-4. How **attention** and **context** relate to modern AI agents.
-5. How **CrewAI** orchestrates agents like a small organization.
-6. How a team of agents can produce an academic PDF end-to-end
-   (research, writing, review, Python graph generation, LaTeX conversion, validation).
+It covers, at minimum:
+
+1. **Introduction** and a definition of **cyberbullying**.
+2. Why **online harm is real harm**, and its psychological, social, and
+   educational impact (discussed carefully and generally — no fabricated stats).
+3. Why **legal consequences may be necessary**, with **proportionality and due
+   process**.
+4. **Minors, schools, and parents**; **platform responsibility**; **evidence,
+   reporting, and documentation**; and **prevention and education**.
+5. A chapter on **the CrewAI production pipeline** used to generate the article,
+   keeping the project methodology visible.
+6. A **bilingual Hebrew–English (BiDi)** chapter and a **conclusion**.
+
+The document also demonstrates how a team of agents can produce an academic PDF
+end-to-end (research, writing, review, Python graph generation, LaTeX
+conversion, validation).
 
 ---
 
@@ -58,14 +71,14 @@ The compiled PDF is **only accepted** when every item below is verifiably presen
 
 | # | Requirement | Acceptance test |
 |---|-------------|-----------------|
-| F1 | ~15 pages of real content | PDF page count is 14–17 pages of body content |
+| F1 | 15–18 pages of real content | PDF page count is about 15–18 pages |
 | F2 | Title page | Shows course (203.3763), lecturer, student, date |
 | F3 | Table of contents | Auto-generated TOC with correct page numbers |
 | F4 | Chapter division | At least 6 chapters/sections matching §3 |
 | F5 | Headers and footers | Running headers + page numbers on every body page |
 | F6 | At least one image | A real embedded image renders in the PDF |
 | F7 | At least one table | A formatted table renders correctly |
-| F8 | One complex math formula | E.g. the scaled dot-product attention equation |
+| F8 | One complex math formula | The conceptual harm-risk score R = αF + βS + γD + δA |
 | F9 | Python-generated graph | A figure produced by agent-written Python code |
 | F10 | Bilingual BiDi chapter | One chapter correctly mixes Hebrew + English |
 | F11 | Citations + bibliography | BibTeX/biber, full reference list with **at least 6 real sources** |

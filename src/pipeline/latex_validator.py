@@ -20,9 +20,9 @@ EXPECTED_PDFS = {BUILT_PDF_PATH.resolve(), FINAL_PDF_PATH.resolve()}
 FEATURE_TOKENS: dict[str, tuple[str, ...]] = {
     "title_page": (r"\begin{titlepage}", "Yoram Reuven Segal"),
     "table_of_contents": (r"\tableofcontents",),
-    "image_graph": (r"\includegraphics", "complexity_comparison"),
+    "image_graph": (r"\includegraphics", "escalation_model"),
     "table": (r"\begin{tabular}", r"\toprule"),
-    "formula": (r"\operatorname{Attention}", r"\begin{equation}"),
+    "formula": (r"R = \alpha F", r"\begin{equation}"),
     "hebrew_english_bidi": (r"\begin{hebrew}", r"\texthebrew"),
     "biblatex_biber": ("backend=biber", r"\printbibliography"),
     "hyperref": (r"{hyperref}", r"\href"),

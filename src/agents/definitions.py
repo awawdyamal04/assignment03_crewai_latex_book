@@ -26,8 +26,8 @@ AGENT_SPECS: list[AgentSpec] = [
     AgentSpec(
         key="researcher",
         role="Researcher",
-        goal="Gather accurate, citable facts and real sources on the evolution "
-        "from RNNs and LSTMs to Transformers and AI agents.",
+        goal="Gather accurate, citable facts and real, credible sources on "
+        "cyberbullying, online harm, and proportional legal responses.",
         backstory="A meticulous academic researcher who only trusts verifiable, "
         "primary sources and records full citation details.",
         tools=["search"],
@@ -68,8 +68,8 @@ AGENT_SPECS: list[AgentSpec] = [
     AgentSpec(
         key="table_formula",
         role="Table and Formula Agent",
-        goal="Specify one formatted table and one complex math formula (the "
-        "scaled dot-product attention equation).",
+        goal="Specify one formatted table (responses to cyberbullying) and one "
+        "conceptual math formula (a harm-risk score).",
         backstory="A technical typesetter who renders data as clean tables and "
         "transcribes mathematics faithfully.",
     ),

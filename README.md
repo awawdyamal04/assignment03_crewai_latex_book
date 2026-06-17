@@ -1,10 +1,13 @@
-# From RNN and LSTM to Transformers and AI Agents
+# Cyberbullying Should Have Legal Consequences
 
-### How Modern AI Systems Generate Knowledge
+### A Multi-Agent Academic Analysis Generated with CrewAI and LuaLaTeX
 
 A multi-agent system built with **CrewAI** that autonomously researches, writes,
-illustrates, reviews, and typesets a ~15-page bilingual (Hebrew + English)
-academic article into a **LuaLaTeX**-compiled PDF.
+illustrates, reviews, and typesets a 15–18 page bilingual (Hebrew + English)
+academic article into a **LuaLaTeX**-compiled PDF. The article argues a
+balanced thesis: cyberbullying should carry **proportional, evidence-based
+legal consequences** in serious cases, combined with education, school
+intervention, reporting systems, and platform responsibility.
 
 > This README is the **final report template** for Assignment 03. Sections
 > marked _TBD_ are filled in as the project is implemented and verified. No
@@ -19,8 +22,8 @@ academic article into a **LuaLaTeX**-compiled PDF.
 |-------|-------|
 | Course | 203.3763 — Orchestration of AI Agents |
 | Assignment | 03 — CrewAI + LaTeX Book/Article |
-| Lecturer | _TBD_ |
-| Student | _TBD_ |
+| Lecturer | Dr. Yoram Reuven Segal |
+| Student | Amal Awawdi |
 | Date | _TBD_ |
 | Repository | _TBD (public GitHub URL)_ |
 
@@ -97,21 +100,25 @@ Prerequisites: a TeX distribution providing `lualatex` and `biber`
 
 ## 7. Document Feature Checklist (F1–F13)
 
+Status reflects the most recent local LuaLaTeX + biber build of
+`results/final_output.pdf` (19 pages, 0 undefined references, 0 missing
+characters).
+
 | # | Feature | Status |
 |---|---------|--------|
-| F1 | ~15 pages of content | ☐ _TBD_ |
-| F2 | Title page (course/lecturer/student/date) | ☐ _TBD_ |
-| F3 | Table of contents | ☐ _TBD_ |
-| F4 | Chapter division | ☐ _TBD_ |
-| F5 | Headers and footers | ☐ _TBD_ |
-| F6 | At least one image | ☐ _TBD_ |
-| F7 | At least one table | ☐ _TBD_ |
-| F8 | One complex math formula | ☐ _TBD_ |
-| F9 | Python-generated graph | ☐ _TBD_ |
-| F10 | Bilingual Hebrew/English chapter | ☐ _TBD_ |
-| F11 | Citations + bibliography (biber, ≥6 sources) | ☐ _TBD_ |
-| F12 | Working PDF hyperlinks | ☐ _TBD_ |
-| F13 | Abstract (English) precedes the body | ☐ _TBD_ |
+| F1 | 15–18 pages of content | ☑ 19 pages total (~16 body) |
+| F2 | Title page (course/lecturer/student/date) | ☑ built |
+| F3 | Table of contents | ☑ built |
+| F4 | Chapter division (13 chapters) | ☑ built |
+| F5 | Headers and footers | ☑ built |
+| F6 | At least one image | ☑ conceptual escalation figure |
+| F7 | At least one table | ☑ responses + agents tables |
+| F8 | One complex math formula | ☑ harm-risk score R = αF+βS+γD+δA |
+| F9 | Python-generated graph | ☑ `escalation_model.png` |
+| F10 | Bilingual Hebrew/English chapter | ☑ 0 missing glyphs |
+| F11 | Citations + bibliography (biber, ≥6 sources) | ☑ 8 real sources |
+| F12 | Working PDF hyperlinks | ☑ hyperref + `\href` |
+| F13 | Abstract (English) precedes the body | ☑ built |
 
 ---
 

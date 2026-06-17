@@ -13,10 +13,10 @@ from src.config import RESULTS_DIR, rel
 from src.pipeline.graph_generator import FIGURE_PATH
 from src.pipeline.technical_assets import ASSET_PATH
 
-# Tokens the comparison table must mention.
-TABLE_TOKENS = ("RNN", "LSTM", "Transformer", "CrewAI")
-# Tokens the attention formula / asset must contain.
-FORMULA_TOKENS = ("Attention", "Q", "K", "V", "softmax", "sqrt")
+# Tokens the responses comparison table must mention.
+TABLE_TOKENS = ("Education", "School", "Platform", "legal")
+# Tokens the conceptual harm-risk formula / asset must contain.
+FORMULA_TOKENS = ("R", "frequency", "severity", "duration", "audience")
 
 
 def check_figure() -> list[str]:

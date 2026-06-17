@@ -113,7 +113,8 @@ definition under `src/tasks/`. `src/main.py` wires them into a `Crew` and runs i
 - **Headers/footers:** `fancyhdr`.
 - **Hyperlinks:** `hyperref` (internal TOC links + external URLs/DOIs).
 - **Bibliography:** `biblatex` backend `biber`, `references.bib`.
-- **Math:** `amsmath`/`amssymb`; complex formula = scaled dot-product attention.
+- **Math:** `amsmath`/`amssymb`; complex formula = the conceptual harm-risk
+  score `R = αF + βS + γD + δA` (educational model, not a legal standard).
 - **Figure/table:** `graphicx` for the PNG, `booktabs` for the table.
 - **Build sequence:** `lualatex → biber → lualatex → lualatex` (resolve refs/TOC),
   driven by a small Python helper or `latexmk` invoked from the CLI.

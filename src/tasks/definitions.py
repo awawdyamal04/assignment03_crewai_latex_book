@@ -29,8 +29,8 @@ TASK_SPECS: list[TaskSpec] = [
     TaskSpec(
         key="research",
         agent_key="researcher",
-        description="Research the path from RNNs and LSTMs to Transformers and "
-        "AI agents. Collect at least six real, citable sources.",
+        description="Research cyberbullying, online harm, and proportional "
+        "legal responses. Collect at least six real, credible sources.",
         expected_output="Markdown notes with key facts and a list of reference "
         "candidates including authors, titles, and years.",
     ),
@@ -69,9 +69,9 @@ TASK_SPECS: list[TaskSpec] = [
     TaskSpec(
         key="table_formula",
         agent_key="table_formula",
-        description="Specify one formatted table and the scaled dot-product "
-        "attention formula for inclusion in the article.",
-        expected_output="Markdown with one table and one complex LaTeX formula.",
+        description="Specify one formatted table (responses to cyberbullying) "
+        "and one conceptual harm-risk formula for inclusion in the article.",
+        expected_output="Markdown with one table and one conceptual LaTeX formula.",
         context_keys=["writing"],
     ),
     TaskSpec(

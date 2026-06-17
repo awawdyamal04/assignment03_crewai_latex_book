@@ -1,14 +1,15 @@
 """Generate the table + formula technical asset (Phase 4).
 
-Writes ``content/tables_formulas.md`` offline — no LLM, no fabricated
+Writes ``content/tables_formulas.md`` offline - no LLM, no fabricated
 research. The file holds three course-aligned technical assets the later
-LaTeX phase inserts into the document:
+LaTeX phase reflects in the document:
 
-* a Markdown comparison table (RNN, LSTM, Transformer, CrewAI agents),
-* one complex LaTeX formula — scaled dot-product attention,
-* a short explanation plus a note that the content is course-aligned.
+* a Markdown comparison table of responses to cyberbullying,
+* one conceptual formula - a harm-risk score,
+* a short explanation plus a note that the content is conceptual/educational.
 
-These are conceptual/definitional assets, not experimental results.
+These are conceptual/illustrative assets, not experimental results, and no
+unsupported legal claim is attached to them.
 """
 
 from __future__ import annotations
@@ -19,75 +20,74 @@ from src.config import ARTIFACTS, ensure_output_dirs, rel
 
 ASSET_PATH: Path = ARTIFACTS["table_formula"]  # content/tables_formulas.md
 
-# The complex formula, kept as a single token block so the validator and the
-# LaTeX converter can locate it unambiguously.
-ATTENTION_FORMULA = (
-    r"\operatorname{Attention}(Q, K, V) = "
-    r"\operatorname{softmax}\!\left(\frac{Q K^{T}}{\sqrt{d_k}}\right) V"
-)
+# The conceptual formula, kept as a single token block so the validator and the
+# LaTeX phase can locate it unambiguously.
+HARM_RISK_FORMULA = r"R = \alpha F + \beta S + \gamma D + \delta A"
 
 _TABLE = """\
-| Model / System | Core mechanism | Sequence handling | Long-range dependencies | Parallelism |
-|----------------|----------------|-------------------|-------------------------|-------------|
-| **RNN** | Recurrent hidden state | Step-by-step (O(n) path) | Weak — vanishing/exploding gradients | Low (sequential) |
-| **LSTM** | Gated cell state (input/forget/output) | Step-by-step (O(n) path) | Improved via gating + cell memory | Low (sequential) |
-| **Transformer** | Scaled dot-product self-attention | All positions at once (O(1) path) | Strong — direct pairwise access | High (parallel) |
-| **CrewAI agents** | Role-based agents + shared context | Sequential task hand-off | Carried by passed task context | Orchestrated (per process) |
+| Response | What it does | Best suited to |
+|----------|--------------|----------------|
+| **Education** | Builds awareness, empathy, and digital-citizenship skills | Prevention and most everyday incidents |
+| **School discipline** | Applies school rules and restorative measures | Conduct involving students within a school's remit |
+| **Platform moderation** | Removes content, warns, or suspends accounts | Policy violations reported on a service |
+| **Civil / legal liability** | Allows claims such as defamation or harassment | Reputational or dignitary harm to identifiable victims |
+| **Criminal / legal consequences** | Reserved for the most serious conduct | Threats, severe harassment, or exploitative content |
 """
 
 
 _HEADER = """\
-<!-- file: tables_formulas.md — offline technical asset, no LLM, no real data -->
+<!-- file: tables_formulas.md - offline technical asset, no LLM, no real data -->
 
-# Technical Assets — Table and Formula
+# Technical Assets - Table and Formula
 
-> Course-aligned technical content for course **203.3763 — Orchestration of
-> AI Agents**. These assets are conceptual/definitional (textbook-level), not
-> experimental results, and are generated offline without calling any LLM.
+> Course-aligned technical content for course **203.3763 - Orchestration of
+> AI Agents**. These assets are conceptual/illustrative, not experimental
+> results, and are generated offline without calling any LLM. They contain no
+> fabricated statistics and no unsupported legal claims.
 
-## 1. Comparison Table
+## 1. Comparison Table - Responses to Cyberbullying
 
 <!-- TABLE-ASSET -->
 """
 
 _TABLE_CAPTION = """\
 
-*Table: conceptual comparison of recurrent models, the Transformer, and
-CrewAI agent orchestration.*
+*Table: conceptual comparison of responses to cyberbullying, from prevention
+through to legal consequences. Categories are general and illustrative; this is
+not legal advice.*
 
-## 2. Complex Formula — Scaled Dot-Product Attention
+## 2. Conceptual Formula - Harm-Risk Score
 
 <!-- FORMULA-ASSET -->
 
 $$
 """
 
-# Plain-text mirror + explanation + note. Not an f-string, so LaTeX braces
-# such as {T} and {d_k} stay literal.
+# Plain-text mirror + explanation + note. Not an f-string, so LaTeX braces stay
+# literal.
 _EXPLANATION = """\
 $$
 
-Plain-text form: `Attention(Q,K,V) = softmax((Q K^T) / sqrt(d_k)) V`.
+Plain-text form: `R = alpha*F + beta*S + gamma*D + delta*A`.
 
 ## 3. Explanation
 
-The scaled dot-product attention is the core operation of the Transformer
-(Vaswani et al., 2017). For each query in $Q$, the dot products $Q K^{T}$
-score how relevant every key in $K$ is. Dividing by $\\sqrt{d_k}$ — the
-square root of the key dimension — keeps those scores from growing too
-large, which would otherwise push the `softmax` into regions with vanishing
-gradients. The `softmax` turns the scaled scores into a probability
-distribution (attention weights) that is then used to take a weighted sum of
-the value vectors $V$. The result is a context-aware representation in which
-every position can attend **directly** to every other position, removing the
-long sequential dependency path that limits RNNs and LSTMs.
+This is an **educational conceptual model, not a real legal formula and not a
+measurement**. It organises a discussion of why some online conduct is treated
+as more serious than other conduct. `R` is a conceptual harm-risk score and the
+factors are: `F` = frequency (how often the conduct recurs), `S` = severity
+(how serious each act is), `D` = duration (how long the conduct or its content
+persists), and `A` = audience/reach (how widely it spreads). The weights
+`alpha, beta, gamma, delta` simply indicate that these factors do not
+contribute equally. No real values are assigned, and the model must never be
+used as an actual measurement or legal standard.
 
 ## 4. Note
 
 <!-- COURSE-ALIGNED-NOTE -->
-This table and formula are **course-aligned technical content**: they restate
-established definitions from the course material and the cited literature and
-contain no fabricated experimental data.
+This table and formula are **course-aligned, conceptual technical content**:
+they organise general, balanced points and contain no fabricated experimental
+data and no unsupported legal claims.
 """
 
 
@@ -97,7 +97,7 @@ def build_markdown() -> str:
         _HEADER
         + _TABLE
         + _TABLE_CAPTION
-        + ATTENTION_FORMULA
+        + HARM_RISK_FORMULA
         + "\n"
         + _EXPLANATION
     )
@@ -112,11 +112,11 @@ def build_assets() -> Path:
 
 def generate_assets() -> int:
     """CLI helper: write the table/formula asset and report the path."""
-    print("ASSETS — writing table + formula Markdown (no LLM)\n")
+    print("ASSETS - writing table + formula Markdown (no LLM)\n")
     path = build_assets()
     print(f"  written: {rel(path)}")
-    print("\nContains: comparison table, scaled dot-product attention formula,")
-    print("explanation, and a course-aligned note.")
+    print("\nContains: responses comparison table, conceptual harm-risk")
+    print("formula, explanation, and a course-aligned note.")
     return 0
 
 

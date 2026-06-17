@@ -8,13 +8,13 @@ Importing this module never calls an LLM and never builds a PDF.
 from __future__ import annotations
 
 # Raw string: backslashes are literal LaTeX, not Python escapes.
-PREAMBLE = r"""% main.tex — academic article assembled by the Phase 5 pipeline.
-% Build engine: lualatex (NOT pdflatex) — required for fontspec + Hebrew BiDi.
+PREAMBLE = r"""% main.tex - academic article assembled by the Phase 5 pipeline.
+% Build engine: lualatex (NOT pdflatex) - required for fontspec + Hebrew BiDi.
 % Bibliography:  biblatex with the biber backend.
 % Build order:   lualatex -> biber -> lualatex -> lualatex
 \documentclass[11pt,a4paper]{report}
 
-% ── Fonts & languages (LuaLaTeX) ────────────────────────────────────────────
+% -- Fonts & languages (LuaLaTeX) --------------------------------------------
 \usepackage{fontspec}
 \usepackage{polyglossia}
 \setmainlanguage{english}
@@ -32,46 +32,46 @@ PREAMBLE = r"""% main.tex — academic article assembled by the Phase 5 pipeline
       {\newfontfamily\hebrewfont[Script=Hebrew]{FrankRuehl}}
       {\newfontfamily\hebrewfont[Script=Hebrew]{Latin Modern Roman}}}}
 
-% ── Mathematics ─────────────────────────────────────────────────────────────
+% -- Mathematics -------------------------------------------------------------
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-% ── Graphics & tables ───────────────────────────────────────────────────────
+% -- Graphics & tables -------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{booktabs}
 % xcolor provides the `blue!50!black` colour-mixing used by hyperref below.
 \usepackage{xcolor}
 \graphicspath{{../figures/}{figures/}}
 
-% ── Headers & footers (every body page) ─────────────────────────────────────
+% -- Headers & footers (every body page) -------------------------------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{From RNN and LSTM to Transformers and AI Agents}
+\fancyhead[L]{Cyberbullying Should Have Legal Consequences}
 \fancyhead[R]{\thepage}
-\fancyfoot[C]{Course 203.3763 — Orchestration of AI Agents}
+\fancyfoot[C]{Course 203.3763 - Orchestration of AI Agents}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-% ── Bibliography (biblatex + biber) ─────────────────────────────────────────
+% -- Bibliography (biblatex + biber) -----------------------------------------
 \usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
 \addbibresource{references.bib}
 
-% ── Hyperlinks (load late) ──────────────────────────────────────────────────
+% -- Hyperlinks (load late) --------------------------------------------------
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
-  pdftitle={From RNN and LSTM to Transformers and AI Agents},
-  pdfsubject={Course 203.3763 — Orchestration of AI Agents},
+  pdftitle={Cyberbullying Should Have Legal Consequences:
+    A Multi-Agent Academic Analysis Generated with CrewAI and LuaLaTeX},
+  pdfsubject={Course 203.3763 - Orchestration of AI Agents},
   colorlinks=true,
   linkcolor=blue!50!black,
   citecolor=green!40!black,
   urlcolor=blue!60!black
 }
 
-% ── Document metadata (filled by the title page) ────────────────────────────
+% -- Document metadata (filled by the title page) ----------------------------
 \newcommand{\coursenumber}{203.3763}
 \newcommand{\coursename}{Orchestration of AI Agents}
 \newcommand{\lecturername}{Dr.\ Yoram Reuven Segal}
-% Student name is a placeholder: replace before submission.
-\newcommand{\studentname}{[STUDENT NAME — replace before submission]}
+\newcommand{\studentname}{Amal Awawdi}
 """
